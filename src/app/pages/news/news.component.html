@@ -1,0 +1,26 @@
+<div #container class="container">
+    <div class="head">
+        <app-modal [open]="openModal" (close)="openModal = false">
+            <app-add-news-form (close)="openModal = false" (add)="addPost($event)"></app-add-news-form>
+        </app-modal>
+        <app-button (click)="openModal = true">+ Добавить</app-button>
+    </div>
+    <div class="list">
+        <div class="item made-user" *ngFor="let item of userNews">
+            <img [src]="item.titleImageUrl" alt="" class="item-image">
+            <div class="item-title">{{item.title}}</div>
+            <div class="item-description">{{item.description}}</div>
+            <div class="item-user-post">Сделано пользователем</div>
+            <div class="item-public-date">{{item.publishedDate}}</div>
+        </div>
+        <div class="item" *ngFor="let item of publicNews" routerLink="/post" [queryParams]="{url: item.url}">
+            <img [src]="item.titleImageUrl" alt="" class="item-image">
+            <div class="item-title">{{item.title}}</div>
+            <div class="item-description">{{item.description}}</div>
+            <div class="item-public-date">{{item.publishedDate}}</div>
+        </div>
+        <div class="loading">
+            Загружаем контент...
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<input 
+    *ngIf="type != 'textarea';else textarea"
+    class="input" 
+    [placeholder]="placeholder" 
+    type="text" 
+    [value]="value" 
+    (input)="change($event)"
+    [type]="type"
+>
+<ng-template #textarea>
+    <textarea 
+        #textarea
+        class="input" 
+        [placeholder]="placeholder" 
+        type="text" 
+        [value]="value" 
+        (input)="change($event)"
+        rows="3"
+    ></textarea>
+</ng-template>

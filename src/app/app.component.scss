@@ -1,0 +1,46 @@
+.layout {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+
+    padding-top: 30px;
+    overflow: hidden;
+}
+
+.header {
+    padding: 10px calc(50% - 500px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+
+    background-color: red;
+    color: white;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0);
+
+    @media (max-width: 1050px) {
+        padding: 10px;
+    }
+}
+
+.logo {
+    font-weight: bold;
+}
+
+.header-link {
+    color: white;
+}
+
+.body {
+    height: 100%;
+    padding: 10px calc(50% - 500px);
+    overflow: hidden;
+}

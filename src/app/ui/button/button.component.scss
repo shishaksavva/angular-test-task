@@ -1,0 +1,38 @@
+[class^='button-'] {
+    border: 1px solid grey;
+    border-radius: 5px;
+
+    outline: none;
+    background-color: white;
+    transition: 150ms;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.button-primary {
+    border-color: red;
+    color: red;
+
+    &:hover {
+        background-color: red;
+        color: white;
+    }
+    
+    &:active {
+        background-color: rgb(255, 69, 69);
+    }
+}
+
+.button-secondary {
+    border-color: grey;
+    color: grey;
+
+    &:hover {
+        background-color: grey;
+        color: white;
+    }
+    
+    &:active {
+        background-color: rgb(70, 70, 70);
+    }
+}

@@ -1,0 +1,20 @@
+<div class="form">
+    <div class="form-title">
+        Новый пост
+    </div>
+    <div class="form-image">
+        <img *ngIf="post.titleImageUrl" [src]="post.titleImageUrl" alt="">
+    </div>
+    <div class="form-input">
+        <app-input placeholder="Заголовок" [(value)]="post.title"></app-input>
+    </div>
+    <div class="form-input">
+        <app-input type="textarea" placeholder="Описание" [(value)]="post.description"></app-input>
+    </div>
+    <div class="form-image-input">
+        <app-button (click)="getImage()">Прикрепить фото</app-button>
+    </div>
+    <div class="form-submit">
+        <app-button (click)="save()">Сохранить</app-button><app-button (click)="close.emit()" type="secondary">Отмена</app-button>
+    </div>
+</div>

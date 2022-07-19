@@ -1,0 +1,6 @@
+<div [@openClose]="open ? 'open' : 'closed'" class="modal-layout" (click)="onClick($event)">
+    <div class="modal">
+        <ng-content></ng-content>
+    </div>
+</div>
+

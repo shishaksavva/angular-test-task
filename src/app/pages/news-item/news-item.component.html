@@ -1,0 +1,6 @@
+<div *ngIf="loading" class="loading">Загрузка</div>
+<div class="container" *ngIf="post">
+    <div class="title">{{post.title}}</div>
+    <div class="content inner-html-content" [innerHTML]="post.text"></div>
+    <div class="date">{{post.publishedDate}}</div>
+</div>
